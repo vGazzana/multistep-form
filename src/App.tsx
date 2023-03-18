@@ -1,3 +1,6 @@
+import AccountForm from "./components/forms/AccountForm";
+import AdressForm from "./components/forms/AdressForm";
+import UserForm from "./components/forms/UserForm";
 import { useFormSteps } from "./hooks/useFormSteps";
 
 function App() {
@@ -10,7 +13,7 @@ function App() {
     nextStep,
     previousStep,
     goToStep,
-  } = useFormSteps([<div>Step 1</div>, <div>Step 2</div>]);
+  } = useFormSteps([<UserForm />, <AdressForm />, <AccountForm />]);
 
   return (
     <section>
